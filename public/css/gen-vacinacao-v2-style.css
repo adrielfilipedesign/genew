@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --height-box: 880px;
+    --width-box: 258px;
+    --padding-box: 5px;
+    --font-box: 23px;
+    --border-width:10px;
+}
+
+body{
+    font-family: sans-serif;
+    font-weight: bold;
+    width: 1024px;
+    height: 1024px;
+}
+.container1{
+    flex-flow: column;
+}
+#subtitle{
+    font-size: 45px;
+    color: rgb(255, 251, 0);
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin-top: -25px;
+}
+#data{
+    color: rgb(255, 230, 0);
+    padding-left: 685px;
+    padding-top: 40px;
+    font-size: 35px;
+}
+#mes{
+    margin-top: 0%;
+    margin-left: 61%;
+    font-size: 45px;
+    color: rgb(255, 230, 0);
+    font-family: 'Roboto', sans-serif;
+
+}
+#hour{
+    margin-top: 0%;
+    margin-left: 61%;
+    font-size: 45px;
+    color: rgb(255, 230, 0);
+    font-family: 'Roboto', sans-serif;
+}
+.local{
+    color: rgb(255, 255, 255);
+   font-family: 'Roboto', sans-serif;
+   font-size: 30px;
+   text-align: center;
+   margin-top: 5px;
+}
+#local-box{
+    height: 70px;
+    width: 800px;
+    background-color: rgba(19, 39, 83, 0.8);
+    border-radius: 15px;
+    border-color: rgba(19, 39, 83, 0.8);
+    border-width: var(--border-width);
+    border-style: solid;  
+    margin: 15px;
+}
+.container2{
+    display: flex;
+    margin-top: 65px;
+    margin-left: 70px;
+}
+.texto{
+    color: aliceblue;
+    font-size: 30px;
+}
+.dose{
+    color: aliceblue;
+    font-size: var(--font-box);
+    text-align: center;
+    line-height: 1;
+}
+.box{
+    display: flex;
+    margin-top: 110px;
+    align-content: center;
+    margin-left: 2px;
+}
+.box2{
+align-content: center;
+display: flex;
+margin-top: -1%;
+padding-left: 110px;
+}
+#dose1-box{
+    height: var(--height-box);
+    width: var(--width-box);
+    background-color: rgb(5, 85, 177);
+    border-radius: 15px;
+    border-color: rgba(0, 92, 197, 0.932);
+    border-width: var(--border-width);
+    border-style: solid;
+    margin: var(--padding-box);
+}
+#dose2-box{
+    height: var(--height-box);
+    width: var(--width-box);
+    background-color: rgba(15, 56, 131, 0.8);
+    border-radius: 15px;
+    border-color: rgba(15, 56, 131, 0.8);
+    border-width: var(--border-width);
+    border-style: solid;
+    margin: var(--padding-box);
+}
+#dose3-box{
+    height: var(--height-box);
+    width: var(--width-box);
+    background-color: rgb(20, 6, 80,80%);
+    border-radius: 15px;
+    border-color: rgba(20, 6, 80,80%);
+    border-width: var(--border-width);
+    border-style: solid;  
+    margin: var(--padding-box);
+}
+#dose4-box{
+    height: var(--height-box);
+    width: var(--width-box);
+    background-color: rgb(9, 2, 37,80%);
+    border-radius: 15px;
+    border-color: rgba(9, 2, 37,80%);
+    border-width: var(--border-width);
+    border-style: solid;  
+    margin: var(--padding-box);
+}
+#btnDownload{
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(5, 49, 63);
+    border-radius: 8px;
+}
+#btnDownload:hover {
+    background-color: rgb(47, 113, 255);
+    color: rgb(255, 255, 255);
+    border-radius: 15px;
+    }
+    
+.elemento1{
+    color:rgb(255, 255, 255);
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: rgb(0, 1, 54);
+    border-radius: 10px;
+}
+.elemento1:hover{
+    color: rgb(0, 132, 255);
+}
+.btYellow{
+	font-family: 'Roboto', sans-serif;
+	height: 50px;
+	width: 300px;
+	border-radius: 15px;
+	font-size: 25px;
+    font-weight: bold;
+	color: #244E80;
+	background-color: #FFE600;
+	border-color: #FFE600;
+	margin: 8px;
+}
+.btBlue{
+	font-family: 'Roboto', sans-serif;
+	height: 50px;
+	width: 350px;
+    font-weight: bold;
+	border-radius: 15px;
+	font-size: 25px;
+	color: #FFE600;
+	background-color: #244E80;
+	border-color: #244E80;
+	margin: 8px;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./../../../public/css/styles.css">
+  <link rel="shortcut icon" href="./../../../public/images/logo-favicon.ico" type="image/x-icon">
+
+  <title>genew | Vacinação-V2</title>
+  <meta name="description" content="gerador de boletins">
+</head>
+<body>
+  <header class="header">
+    <a href="./../../../index.html"><img class="header-logo" src="../../../public/images/logo01.svg"></a>
+    <nav class="header-menu">
+      <a href="./../../../index.html" class="header-item">início</a>
+      <a href="./../../../pages/como-usar.html" class="header-item">como usar</a>
+      <a href="./../../../pages/sobre.html" class="header-item">sobre</a>
+    </nav>
+  </header>
+  
+  <main class="form">
+    <div>
+      <br>
+      <h1 id="text">Gerador Boletim Vacinação-V2</h1>
+      <p id="text" >Preencha os campos abaixo e clique em "gerar"</p>
+      <br>
+    </div>
+        <form  action="../../gen/sms/vacinacao-v2.html">
+
+          <div>
+            <label id="text">Dia | Exe: 01 e 02</label>
+            <br>
+            <input type="text" id="data" name="data" size="25" required>
+            <select style="font-size: large;"id="mes" name="mes" required>
+      
+              <option>Janeiro</option>
+              <option>Fevereiro</option>
+              <option>Março</option>
+              <option>Abril</option>
+              <option>Maio</option>
+              <option>Junho</option>
+              <option>Julho</option>
+              <option>Agosto</option>
+              <option>Setembro</option>
+              <option>Outubro</option>
+              <option>Novembro</option>
+              <option>Dezembro</option>
+      
+           </select>
+          </div>
+            <br>
+            <label id="text">Esse boletim já tem os horários de atendimento inseridos</label>
+            <br>
+            <label id="desc">Local:</label>
+          <select style="font-size: large;"id="local" name="local" required>
+      
+            <option>ESF Laurita de Souza Dias</option>
+            <option>ESF Leonora Dias de Brito</option>
+            <option>ESF José Alberto Guedes</option>
+            <option>ESF Donizete Menezes dos Santos</option>
+            <option>ESF Izabel Menezes Coelho</option>
+            <option>Secretaria Municipal de Sáude</option>
+      
+         </select>
+         </div>
+              <br>  
+              
+        <h1 id="desc">informações sobre as doses:</h1>
+          <div id="boxes_text" style="align-items: center;">
+      
+            <textarea id="1dose" name="1dose" rows="10" cols="30" placeholder="1ª Dose - para quebra de texto escreva <br>, no final da frase."></textarea>
+          <textarea id="2dose" name="2dose" rows="10" cols="30" placeholder="2ª Dose - para quebra de texto escreva <br>, no final da frase."></textarea>
+          <textarea id="3dose" name="3dose" rows="10" cols="30" placeholder="3ª Dose - para quebra de texto escreva <br>, no final da frase."></textarea>
+          <textarea id="4dose" name="4dose" rows="10" cols="30" placeholder="4ª Dose - para quebra de texto escreva <br>, no final da frase."></textarea>
+
+          </div> 
+          </div>
+      
+  <div class="question">
+    <input type="submit" value="Gerar Boletim" id="send" class="btBlue2" style="align-self: center;"></input>
+  </div>
+  </main>
+
+  <footer class="footer">
+
+    <h3 class="footer-write">Genew - Gerador de boletins online| 2021-2022<br>Desenvolvido por Adriel Filipe<br>projeto voltado para fins de estudo</h3>
+  </footer>
+
+</body>
+</html>

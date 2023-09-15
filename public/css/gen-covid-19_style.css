@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    width: 789px;
+    height: 990px;
+}
+.container1{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cont1{
+    margin-left: 605px;
+}
+#mes{
+    margin-top: 46px;
+    font-size: px;
+}
+#semana{
+    margin-top: 10px;
+    font-size: 17px;
+}
+#dia{
+    font-size: 35px;
+    margin-top: -6px;
+}
+.container2{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: -525px;
+    font-size: 30px;
+}
+#notificacoes{
+    top: 330px;
+    position: absolute;
+}
+#confirmados{
+    top: 445px;
+    position: absolute;
+}
+#suspeitos{
+    top:535px;
+    position: absolute;
+}
+#ativos{
+    top:620px;
+    position: absolute;
+}
+.container3{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+    margin-left: 145px;
+}
+#descartados{
+    top: 330px;
+    position: absolute;
+}
+#isolamento{
+    top: 445px;
+    position: absolute;
+}
+#recuperados{
+    top:535px;
+    position: absolute;
+}
+#obitos{
+    top:620px;
+    position: absolute;
+}
+.containerhj{
+   display: flex;
+   font-size: 20px;
+   flex-direction: row;
+}
+#atv-hoje{
+    top: 775px;
+    left: 80px;
+    position: absolute;
+}
+#sus-hoje{
+    top: 775px;
+    left: 312px;
+    position: absolute;
+}
+#neg-hoje{
+    top: 775px;
+    left: 545px;
+    position: absolute;
+}
+
+#btnDownload{
+    color: rgb(58, 4, 31);
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    background-color: lightblue;
+    border-radius: 8px;
+}
+#button-index{
+    border-radius: 8px;
+    font-size: 30px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+.elemento1{
+    color:rgb(255, 255, 255);
+    font-family: sans-serif;
+    font-size: 26px;
+    background-color: rgb(0, 54, 29);
+    border-radius: 10px;
+}
+.elemento1:hover{
+    color: rgb(0, 255, 0);
+}
+.btYellow{
+	font-family: 'Roboto', sans-serif;
+	height: 50px;
+	width: 300px;
+	border-radius: 15px;
+	font-size: 25px;
+    font-weight: bold;
+	color: #244E80;
+	background-color: #FFE600;
+	border-color: #FFE600;
+	margin: 8px;
+}
+.btBlue{
+	font-family: 'Roboto', sans-serif;
+	height: 50px;
+	width: 350px;
+    font-weight: bold;
+	border-radius: 15px;
+	font-size: 25px;
+	color: #FFE600;
+	background-color: #244E80;
+	border-color: #244E80;
+	margin: 8px;
+}

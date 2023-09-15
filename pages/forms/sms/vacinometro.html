@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./../../../public/css/styles.css">
+  <link rel="shortcut icon" href="./../../../public/images/logo-favicon.ico" type="image/x-icon">
+
+
+  <title>genew | Vacinomêtro</title>
+  <meta name="description" content="gerador de boletins">
+</head>
+<body>
+  <header class="header">
+    <a href="./../../../index.html"><img class="header-logo" src="../../../public/images/logo01.svg"></a>
+    <nav class="header-menu">
+      <a href="./../../../index.html" class="header-item">início</a>
+      <a href="./../../../pages/como-usar.html" class="header-item">como usar</a>
+      <a href="./../../../pages/sobre.html" class="header-item">sobre</a>
+    </nav>
+  </header>
+  
+  <main class="form">
+    <div>
+      <br>
+      <h1 id="text">Gerador Boletim Vacinomêtro</h1>
+      <p id="text" >Preencha os campos abaixo e clique em "gerar"</p>
+      <br>
+    </div>
+
+        <form action="./../../../pages/gen/sms/vacinometro.html">
+
+          <label id="desc">Data:</label>
+          <br>
+          <input type="text" id="dia" name="dia" size="30" step="any" required>
+          <label id="desc">de</label>
+          <select id="mes" name="mes" required>
+    
+             <option>Janeiro</option>
+             <option>Fevereiro</option>
+             <option>Março</option>
+             <option>Abril</option>
+             <option>Maio</option>
+             <option>Junho</option>
+             <option>Julho</option>
+             <option>Agosto</option>
+             <option>Setembro</option>
+             <option>Outubro</option>
+             <option>Novembro</option>
+             <option>Dezembro</option>
+    
+          </select>
+          <label id="desc">de</label>
+          <input type="text" id="ano" name="ano" size="30" step="any" required>
+         
+      <div>
+        <label id="desc">Doses Recebidas:</label><br>
+          <label id="desc">Dose 1:</label>
+          <input  type="number" id="doseR1" name="doseR1" size="30" step="any" required>
+      </div>
+    
+      <div>
+        <label id="desc">Dose 2:</label>
+        <input  type="number" id="doseR2" name="doseR2" size="30" step="any" required>
+      </div>
+      
+      <div>
+        <label id="desc">Dose reforço 1:</label>
+        <input  type="number" id="doseRf1" name="doseRf1" size="30" step="any" required>
+      </div>
+    
+      <div>
+        <label id="desc">Dose reforço 2:</label>
+        <input  type="number" id="doseRf2" name="doseRf2" size="30" step="any" required>
+      </div>
+    
+      <div>
+        <label id="desc">Dose única:</label>
+        <input  type="number" id="doseU" name="doseU" size="30" step="any" required>
+      </div>
+
+      <div>
+        <label id="desc">Total doses aplicadas:</label>
+        <input  type="number" id="doseDa" name="doseDa" size="30" step="any" required>
+      </div>
+    
+    <p id="desc" >Percentual:</p>
+    
+    <div>
+      <label id="desc">População Apta Vacinável - 5 anos</label>
+      <input  type="number" id="pPav" name="pPav" required step="any">
+    </div>
+    
+    <div>
+      <label id="desc">Criança 5 a 11 anos</label>
+      <input  type="number" id="pC5a11" name="pC5a11" required step="any" >
+    </div>
+    
+    <div>
+      <label id="desc">População geral</label>
+      <input  type="number" id="pPg" name="pPg" required step="any" >
+    </div>
+    
+    <div>
+      <label id="desc">Reforço 1</label>
+      <input  type="number" id="pR1" name="pR1" required step="any">
+    </div>
+    
+    <div>
+      <label id="desc">Reforço 2</label>
+      <input type="number" id="pR2" name="pR2" required step="any">
+    </div>
+
+  <div class="question">
+    <input type="submit" value="Gerar Boletim" id="send" class="btBlue2" style="align-self: center;"></input>
+  </div>
+
+  </main>
+
+  <footer class="footer">
+    <h3 class="footer-write">Genew - Gerador de boletins online| 2021-2022<br>Desenvolvido por Adriel Filipe<br>projeto voltado para fins de estudo</h3>
+  </footer>
+
+</body>
+</html>

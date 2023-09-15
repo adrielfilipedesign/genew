@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./../../../public/css/gen-vacinacao-infantil.css" media="screen" />
+    <link rel="shortcut icon" href="../../public/images/logo-favicon.ico" type="image/x-icon">
+
+    <title>genew - Vacinação infantil</title>
+
+    <script src="../../../public/js/dom-to-image.js" defer> </script>
+ 
+</head>
+
+<body style="width: 1080px; height: 1350px;">
+
+<div id="drivethru" style="background-image: url('./../../../public/images/bg-vacinacao-infantil.png'); background-repeat: no-repeat; width: 1080px; height: 1350px;">
+<br>
+    <div>
+        <p id="public"></p>
+    </div>
+<br>
+   <div id="box1">
+       <div id='box'>
+       <p id="infoLocal"></p>
+    </div>
+   </div>
+
+   <div>
+       <p id="hora"></p>
+   </div>
+    
+
+</div>
+
+<br>
+
+<a href="../../../../index.html"><button  class="btBlue">Página Inicial</button></a>
+<input type="button" class="btYellow" onclick="download()" value="Download">
+
+<script src="./../../../public/js/jquery-3.4.1.slim.min.js"></script>
+<script src="./../../../public/js/bootstrap.min.js"></script>
+
+<script>
+
+// variables who will received values
+const urlParam = new URLSearchParams(window.location.search);
+const publicParam = urlParam.get("public");
+const dateParam = urlParam.get("data");
+const monthParam = urlParam.get("mes");
+const hourParam = urlParam.get("hour");
+const localParam = urlParam.get("local");
+
+
+// send values to boletim
+
+document.getElementById('public').innerHTML = publicParam;
+document.getElementById('infoLocal').innerHTML = dateParam + " de " + monthParam + " | local: " + localParam;
+document.getElementById('hora').innerHTML = hourParam;
+
+function download() {
+console.log("rodou");
+
+ var node = document.getElementById('drivethru');
+
+   domtoimage.toPng(node)
+    .then(function (dataUrl) {
+        var img = new Image();
+        img.src = dataUrl;
+        downloadURI(dataUrl, "vacinação-infantil.jpg")
+    })
+    .catch(function (error) {
+        console.error('oops, something went wrong', error);
+    });
+       }
+    function downloadURI(uri, name) {
+        var link = document.createElement("a");
+        link.download = name;
+        link.href = uri;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        delete link;   
+}
+    </script>
+</body>
+</html>

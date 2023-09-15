@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./../../../public/css/gen-vagas_emprego-style.css" media="screen" />
+    <link rel="shortcut icon" href="../../public/images/logo-favicon.ico" type="image/x-icon">
+    <title>genew | Vagas de Emprego</title>
+
+    <script src="../../../public/js/dom-to-image.js" defer> </script>
+ 
+</head>
+
+<body style="width: 1024px; height: 1024px;">
+
+<div id="infvagas" style="background-image: url('../../../public/images/bg-vagas-emprego.png'); background-repeat: no-repeat; width: 1024px; height: 1024px;">
+
+    <div class="container1">
+        <p id="data" class="cont1"></p>
+    </div>
+
+    <div class="container2">
+        <div>
+        <p id="vaga" class="cont2"></p>
+        </div>
+    </div>
+
+</div>
+
+<br>
+
+<a href="../../../../index.html"><button  class="btYellow">Página Inicial</button></a>
+<input type="button" class="btBlue" onclick="download()" value="Download">
+
+<script src="../../public/js/jquery-3.4.1.slim.min.js"></script>
+<script src="../../public/js/bootstrap.min.js"></script>
+
+<br>
+<br>
+
+<p style="font-size: 30px;">Texto para publicação:</p>
+
+<br>
+
+<p style="font-size: 25px;">Confira as vagas de emprego disponíveis no CIAT - <p style="font-size: 25px;" id="data2"></p> 
+ <br>
+
+    Interessados procurar o CIAT no endereço:<br>
+    Horário de Funcionamento 7h às 13h<br>
+    Rua Antônio Carlos Barbosa - 1195 , Bairro Maria de Lourdes<br>
+    
+    #oportunidade #ciat #utilidadepublica #compartilhe #umnovotempo<br>
+</p>
+
+<script>
+
+// variables who will received values
+const urlParam2 = new URLSearchParams(window.location.search);
+
+const dataParam = urlParam2.get("data");
+const vagaParam = urlParam2.get("vaga");
+
+// send values to boletim
+
+document.getElementById('data').innerHTML = dataParam;
+document.getElementById('vaga').innerHTML = vagaParam;
+document.getElementById('data2').innerText = dataParam;
+
+function download() {
+console.log("rodou");
+
+ var node = document.getElementById('infvagas');
+
+   domtoimage.toPng(node)
+    .then(function (dataUrl) {
+        var img = new Image();
+        img.src = dataUrl;
+        downloadURI(dataUrl, "vagas_emprego " + dataParam + ".jpg")
+    })
+    .catch(function (error) {
+        console.error('oops, something went wrong', error);
+    });
+       }
+    function downloadURI(uri, name) {
+        var link = document.createElement("a");
+        link.download = name;
+        link.href = uri;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        delete link;   
+}
+    </script>
+</body>
+</html>

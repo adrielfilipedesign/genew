@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./../../../public/css/gen-vacinometro-style.css" media="screen" />
+    <link rel="shortcut icon" href="../../public/images/logo-favicon.ico" type="image/x-icon">
+
+    <title>genew | Vacinomêtro</title>
+
+    <script src="../../../public/js/dom-to-image.js" defer> </script>
+ <style>
+:root{
+    /* progress bars */
+
+    --fill-color:rgb(118, 207, 28);
+    --bg-fill-color:rgb(36, 34, 34);
+    --height-size: 50px;
+    --width-size: 350px;
+    --font-size: 30px;
+    --border-radius: 10px;
+    /* descripton */
+
+}
+.pPav{
+    position: relative;
+    width: var(--width-size);
+    height: var(--height-size);
+    background:var(--bg-fill-color);
+    border-radius:var(--border-radius);
+}
+.pPav__fill{
+    width: 0%;
+    height: 100%;
+    background:var(--fill-color);
+    border-radius:var(--border-radius);
+}
+.pPav__text{
+    display: flex;
+    position: absolute;
+    top: 8px;
+    left: 40%;  
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: aliceblue;
+    font-size:var(--font-size);
+}
+
+.a18{
+    position: relative;
+    width: var(--width-size);
+    height: var(--height-size);
+    background:var(--bg-fill-color);
+    border-radius:var(--border-radius);
+}
+.a18__fill{
+    width: 0%;
+    height: 100%;
+    background:var(--fill-color);
+    border-radius:var(--border-radius);
+}
+.a18__text{
+    display: flex;
+    position: absolute;
+    top: 8px;
+    left: 40%;  
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: aliceblue;
+    font-size: var(--font-size);
+}
+.pg{
+    position: relative;
+    width: var(--width-size);
+    height: var(--height-size);
+    background:var(--bg-fill-color);
+    border-radius:var(--border-radius);
+}
+.pg__fill{
+    width: 0%;
+    height: 100%;
+    background:var(--fill-color);
+    border-radius:var(--border-radius);
+}
+.pg__text{
+    display: flex;
+    position: absolute;
+    top: 8px;
+    left: 40%;  
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: aliceblue;
+    font-size: var(--font-size);
+}
+.b3d{
+    position: relative;
+    width: var(--width-size);
+    height: var(--height-size);
+    background:var(--bg-fill-color);
+    border-radius:var(--border-radius);
+}
+.b3d__fill{
+    width: 0%;
+    height: 100%;
+    background:var(--fill-color);
+    border-radius:var(--border-radius);
+}
+.b3d__text{
+    display: flex;
+    position: absolute;
+    top: 8px;
+    left: 40%;  
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: aliceblue;
+    font-size: var(--font-size);
+}
+
+.c5a11{
+    position: relative;
+    width: var(--width-size);
+    height: var(--height-size);
+    background:var(--bg-fill-color);
+    border-radius:var(--border-radius);
+}
+.c5a11__fill{
+    width: 0%;
+    height: 100%;
+    background:var(--fill-color);
+    border-radius:var(--border-radius);
+}
+.c5a11__text{
+    display: flex;
+    position: absolute;
+    top: 8px;
+    left: 40%;  
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: aliceblue;
+    font-size: var(--font-size);
+}
+ </style>
+</head>
+
+<body style="width: 1350px; height: 1080px;">
+
+<div id="infdoses" style="background-image: url('../../../public/images/bg-vacinometro.png'); background-repeat: no-repeat; width: 1080px; height: 1350px;">
+
+        <p id="dataFull" class="dataFull"></p>
+        
+    <div class="container2">
+        <p type="number" id="dose1" class="dose1" step=".01"></p>
+        <p type="number" id="dose2" class="dose2" step=".01"></p>
+        <p type="number" id="dose3" class="dose3" step=".01"></p>
+        <p type="number" id="dose4" class="dose4" step=".01"></p>
+        <p type="number" id="dose6" class="dose6" step=".01"></p>
+    </div>
+
+    <p type="number" id="dose5" class="dose5" step=".01"></p>
+
+<!--progress bars-->
+
+<div class="containerbar">
+    
+    <div class="bloco-esquerda"> 
+        
+        <div class="bloco">
+            <p id="sub-tittle">População apta vacinável<br> - 5 anos +:</p>
+            <div class="pPav">
+                <div  id="pPav" class="pPav__fill"></div>
+                <span id="textpPav" class="pPav__text"></span>
+            </div>
+        </div>
+
+        <div class="bloco">
+            <p id="sub-tittle">Crianças de 5 a 11 anos:</p>
+            <div class="a18">
+                <div  id="a18" class="a18__fill"></div>
+                <span id="texta18" class="a18__text"></span>
+            </div>
+        </div>
+
+        <div class="bloco">
+            <p id="sub-tittle">População geral:</p>
+            <div class="pg">
+                <div  id="pg" class="pg__fill"></div>
+                <span id="textpg" class="pg__text"></span>
+            </div>
+        </div>
+    </div> 
+
+    <div class="bloco-direita">
+        <div class="bloco">
+            <p id="sub-tittle">Reforço 1:</p>
+            <div class="b3d">
+                <div  id="b3d" class="b3d__fill"></div>
+                <span id="textb3d" class="b3d__text"></span>
+            </div>
+        </div>
+
+        <div class="bloco">
+            <p id="sub-tittle">Reforço 2:</p>
+            <div class="c5a11">
+                <div  id="c5a11" class="c5a11__fill"></div>
+                <span id="textc5a11" class="c5a11__text"></span>
+            </div>
+        </div>
+
+        </div>
+    </div>
+</div>
+
+</div>
+
+<br>
+
+<a href="../../../../index.html"><button  class="btBlue">Página Inicial</button></a>
+<input type="button" class="btYellow" onclick="download()" value="Download">
+
+<script src="../../public/js/jquery-3.4.1.slim.min.js"></script>
+<script src="../../public/js/bootstrap.min.js"></script>
+<br>
+
+<script>
+
+// variables who will received values
+const urlParam = new URLSearchParams(window.location.search);
+
+const diaParam = urlParam.get("dia");
+const mesParam = urlParam.get("mes");
+const anoParam = urlParam.get("ano");
+
+const doseR1Param = urlParam.get("doseR1");
+const doseR2Param = urlParam.get("doseR2");
+const doseRf1Param = urlParam.get("doseRf1");
+const doseRf2Param = urlParam.get("doseRf2");
+const doseTaParam = urlParam.get("doseDa");
+const doseUParam = urlParam.get("doseU");
+
+//bars
+
+const Per1Param = urlParam.get("pPav");
+const Per2Param = urlParam.get("pC5a11");
+const Per3Param = urlParam.get("pPg");
+const Per4Param = urlParam.get("pR1");
+const Per5Param = urlParam.get("pR2");
+
+// send values to vacinometro
+
+document.getElementById('dataFull').innerHTML = diaParam + " de " + mesParam + " de " + anoParam;
+
+document.getElementById('dose1').innerHTML = doseR1Param;
+document.getElementById('dose2').innerHTML = doseR2Param;
+document.getElementById('dose3').innerHTML = doseRf1Param;
+document.getElementById('dose4').innerHTML = doseRf2Param;
+document.getElementById('dose5').innerHTML = doseTaParam;
+document.getElementById('dose6').innerHTML = doseUParam;
+
+//Percentual
+
+document.querySelector('.pPav__fill').style.width = Per1Param + "%";
+document.getElementById('textpPav').innerHTML = Per1Param + "%";
+
+document.querySelector('.a18__fill').style.width = Per2Param + "%";
+document.getElementById('texta18').innerHTML = Per2Param + "%";
+
+document.querySelector('.pg__fill').style.width = Per3Param + "%";
+document.getElementById('textpg').innerHTML = Per3Param + "%";
+
+document.querySelector('.b3d__fill').style.width = Per4Param + "%";
+document.getElementById('textb3d').innerHTML = Per4Param + "%";
+
+document.querySelector('.c5a11__fill').style.width = Per5Param + "%";
+document.getElementById('textc5a11').innerHTML = Per5Param + "%";
+
+function download() {
+    
+console.log("ok");
+
+ var node = document.getElementById('infdoses');
+
+   domtoimage.toPng(node)
+    .then(function (dataUrl) {
+        var img = new Image();
+        img.src = dataUrl;
+        downloadURI(dataUrl, "Vacinômetro-" + diaParam + " de " + mesParam + " de " + anoParam + ".jpg");
+    })
+    .catch(function (error) {
+        console.error('oops, something went wrong', error);
+    });
+       }
+    function downloadURI(uri, name) {
+        var link = document.createElement("a");
+        link.download = name;
+        link.href = uri;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        delete link;   
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./../../../public/css/styles.css">
+  <link rel="shortcut icon" href="./../../../public/images/logo-favicon.ico" type="image/x-icon">
+
+  <title>genew | Covid-19</title>
+  <meta name="description" content="gerador de boletins">
+</head>
+<body>
+  <header class="header">
+    <a href="./../../../index.html"><img class="header-logo" src="../../../public/images/logo01.svg"></a>
+    <nav class="header-menu">
+      <a href="./../../../index.html" class="header-item">início</a>
+      <a href="./../../../pages/como-usar.html" class="header-item">como usar</a>
+      <a href="./../../../pages/sobre.html" class="header-item">sobre</a>
+    </nav>
+  </header>
+  
+  <main class="form">
+    <div>
+      <br>
+      <h1 id="text">Gerador Boletim Covid-19</h1>
+      <p id="text" >Preencha os campos abaixo e clique em "gerar"</p>
+      <br>
+    </div>
+        <form  action="./../../../pages/gen/sms/covid-19.html" >
+
+     <div>
+          <div class="container">
+        
+          <label id="desc" class="item">Dia</label>
+          <input type="number"  id="dia" name="dia" required>
+          <br>
+          <label id="desc">Mês</label>
+          <select id="mes" name="mes" required>
+    
+             <option>Janeiro</option>
+             <option>Fevereiro</option>
+             <option>Março</option>
+             <option>Abril</option>
+             <option>Maio</option>
+             <option>Junho</option>
+             <option>Julho</option>
+             <option>Agosto</option>
+             <option>Setembro</option>
+             <option>Outubro</option>
+             <option>Novembro</option>
+             <option>Dezembro</option>
+    
+          </select>
+          <br>
+          <label id="desc">Dia da semana</label>
+          <select id="semana" name="semana" required>
+    
+            <option>Domingo</option>
+            <option>Segunda</option>
+            <option>Terça</option>
+            <option>Quarta</option>
+            <option>Quinta</option>
+            <option>Sexta</option>
+            <option>Sábado</option>
+         
+            </select>
+          </div>
+      </div>
+  
+    <br>
+    <!--INF COVID-19 CASES-->
+    <fieldset >
+      <br>
+      <div class="container">
+     <div>
+        <label id="desc">Confirmados</label>
+        <input type="number" id="confirmados" name="confirmados" step=".01" size="3" required>
+      </div>
+      <div>
+        <label id="desc">Ativos</label>
+        <input type="number" id="ativos" name="ativos" size="5" step=".01" required>
+      </div>
+      <div>
+        <label id="desc">Recuperados</label>
+        <input type="number" id="recuperados" name="recuperados" size="5" step=".01" required>
+      </div>
+    <div>
+        <label id="desc">Suspeitos</label>
+        <input type="number" id="suspeitos" name="suspeitos" size="5" step=".01" required>
+    </div>    
+    <div>
+        <label id="desc">Isolamento</label>
+        <input type="number" id="isolamento" name="isolamento" size="5" step=".01"  required>
+    </div>
+    <div>
+        <label id="desc">Descartados</label>
+        <input type="number" id="descartados" name="descartados" size="5" step=".01" required>
+      </div>
+      <div>
+        <label id="desc">Ativos Hoje</label>
+        <input type="number" id="atv-hoje" name="atv-hoje"  size="3" step=".01" required>
+      </div>
+      <div>
+        <label id="desc">Suspeitos Hoje</label>
+        <input type="number" id="sus-hoje" name="sus-hoje" size="3" step=".01"  required>
+      </div>
+      <div>
+        <label id="desc">Negativos Hoje</label>
+        <input type="number" id="neg-hoje" name="neg-hoje" size="3" step=".01" required>
+      </div>
+    <div>
+        <label id="desc">Óbitos</label>
+        <input type="number" id="obitos" name="obitos" size="3"  step=".01" required>
+      </div>
+      <div>
+        <label id="desc">Notificações</label>
+        <input type="number" id="notificacoes" name="notificacoes" size="3" step=".01" required>
+    </div>
+      </div>
+    <br>
+    </fieldset> 
+
+    </section>
+
+  <div class="question">
+    <input type="submit" value="Gerar Boletim" id="send" class="btBlue2" style="align-self: center;"></input>
+   
+  </div>
+
+  </main>
+<
+  <footer class="footer">
+    <h3 class="footer-write">Genew - Gerador de boletins online| 2021-2022<br>Desenvolvido por Adriel Filipe<br>projeto voltado para fins de estudo</h3>
+  </footer>
+
+</body>
+</html>

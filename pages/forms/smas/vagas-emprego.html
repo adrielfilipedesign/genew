@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./../../../public/css/styles.css">
+  <link rel="shortcut icon" href="./../../../public/images/logo-favicon.ico" type="image/x-icon">
+
+  <title>genew | Vagas de emprego</title>
+  <meta name="description" content="gerador de boletins">
+</head>
+<body>
+  <header class="header">
+    <a href="./../../index.html"><img class="header-logo" src="../../../public/images/logo01.svg"></a>    <nav class="header-menu">
+      <a href="../../index.html" class="header-item">início</a>
+      <a href="../../pages/como-usar.html" class="header-item">como usar</a>
+      <a href="../../pages/sobre.html" class="header-item">sobre</a>
+    </nav>
+  </header>
+  
+  <main class="form">
+    <div>
+      <br>
+      <h1 id="text">Gerador Boletim Vagas de emprego</h1>
+      <p id="text" >Preencha os campos abaixo e clique em "gerar"</p>
+      <br>
+    </div>
+        <form  action="../../gen/smas/vagas_emprego.html" >
+
+    <div class="container">
+    
+      <label id="desc">Data: 00/00/0000</label><br>
+      <input type="text" id="data" name="data" size="30" required>
+      <br>
+      <label id="desc">Vagas de Emprego: <br> Máximo de 12 vagas</label>
+      <br>
+      <textarea  id="vaga" name="vaga" rows="12" cols="30" placeholder="para quebra de texto escreva <br> no final da linha."></textarea>
+      <br>
+
+    </div>
+  <div class="question">
+    <input type="submit" value="Gerar Boletim" id="send" class="btBlue2" style="align-self: center;"></input>
+   
+  </div>
+
+  </main>
+
+  <footer class="footer">
+    <h3 class="footer-write">Genew - Gerador de boletins online| 2021-2022<br>Desenvolvido por Adriel Filipe<br>projeto voltado para fins de estudo</h3>
+  </footer>
+
+</body>
+</html>

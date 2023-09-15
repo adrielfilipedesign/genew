@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./../../../public/css/gen-vacinacao-v1-style.css" media="screen" />
+    <link rel="shortcut icon" href="../../public/images/logo-favicon.ico" type="image/x-icon">
+    <title>genew - Vacinação-V1</title>
+
+    <script src="../../../public/js/dom-to-image.js" defer> </script>
+ 
+</head>
+
+<body style="width: 1080px; height: 1350px;">
+
+<div id="drivethru" style="background-image: url('../../../public/images/bg-vacinacao-v1.png'); background-repeat: no-repeat; width: 1080px; height: 1350px;">
+<br>
+    <div>
+        <p id="data" class="data"></p>
+        <p id="mes" class="mes"></p>
+        <p id="hour" class="hour"></p>
+    </div>
+   
+    <div class="box">
+        
+        <div id="dose1-box">
+            <br>
+            <p id="subtitle">1ª Dose</p>
+            
+        <p id="dose1" class="dose"></p>
+        </div>
+
+        <div id="dose2-box">
+            <br>
+            <p id="subtitle">2ª Dose</p>
+            
+            <p id="dose2" class="dose"></p>
+        </div>
+
+        <div id="dose3-box">
+            <br>
+            <p id="subtitle">3ª Dose</p>
+            
+            <p id="dose3" class="dose"></p>
+        </div>
+
+        <div id="dose4-box">
+            <br>
+            <p id="subtitle">4ª Dose</p>
+            
+            <p id="dose4" class="dose"></p>
+        </div>
+
+    </div>
+    
+    <p id="subtitle-influenza">Influenza</p>
+    <div id="dose-gripe-box">
+        <br>
+        <p id="dosegripe" class="dosegripe"></p>
+    </div>
+
+    <div class="box2">
+        <div id="local-box">
+            <p id="local" class="local"></p>
+        </div>
+    </div>
+
+</div>
+
+<br>
+
+<a href="../../../../index.html"><button  class="btBlue">Página Inicial</button></a>
+<input type="button" class="btYellow" onclick="download()" value="Download">
+
+<script src="./../../../public/js/jquery-3.4.1.slim.min.js"></script>
+<script src="./../../../public/js/bootstrap.min.js"></script>
+
+<script>
+
+// variables who will received values
+const urlParam = new URLSearchParams(window.location.search);
+
+const dataParam = urlParam.get("data");
+const hourinParam = urlParam.get("hourin");
+const houroutParam = urlParam.get("hourout");
+const mesParam = urlParam.get("mes");
+
+//Doses 
+
+const dose1Param = urlParam.get("1dose");
+const dose2Param = urlParam.get("2dose");
+const dose3Param = urlParam.get("3dose");
+const dose4Param = urlParam.get("4dose");
+const doseInfluenza = urlParam.get("influenza");
+
+const localParam = urlParam.get("local");
+// send values to boletim
+
+document.getElementById('data').innerHTML = dataParam;
+document.getElementById('hour').innerHTML = hourinParam + " às " + houroutParam;
+document.getElementById('mes').innerHTML = "de " + mesParam;
+
+//Doses
+
+document.getElementById('dose1').innerHTML = dose1Param;
+document.getElementById('dose2').innerHTML = dose2Param;
+document.getElementById('dose3').innerHTML = dose3Param;
+document.getElementById('dose4').innerHTML = dose4Param;
+document.getElementById('dosegripe').innerHTML = doseInfluenza;
+
+document.getElementById('local').innerHTML = "Local: " + localParam;
+
+function download() {
+console.log("rodou");
+
+ var node = document.getElementById('drivethru');
+
+   domtoimage.toPng(node)
+    .then(function (dataUrl) {
+        var img = new Image();
+        img.src = dataUrl;
+        downloadURI(dataUrl, "vacinação-" + dataParam + "-" + hourinParam + houroutParam +".jpg")
+    })
+    .catch(function (error) {
+        console.error('oops, something went wrong', error);
+    });
+       }
+    function downloadURI(uri, name) {
+        var link = document.createElement("a");
+        link.download = name;
+        link.href = uri;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        delete link;   
+}
+    </script>
+</body>
+</html>

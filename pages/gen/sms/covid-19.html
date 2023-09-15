@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./../../../public/css/gen-covid-19_style.css" media="screen" />
+    <link rel="shortcut icon" href="../../public/images/logo-favicon.ico" type="image/x-icon">
+    <title>genew | Covid-19</title>
+
+    <script src="../../../public/js/dom-to-image.js" defer> </script>
+ 
+</head>
+
+<body style="width: 790px; height: 990px;">
+
+<div id="infboletim" style="background-image: url('../../../public/images/bg-covid-19.png'); background-repeat: no-repeat; width: 790px; height: 990px;">
+
+    <!---Header // Date-->
+   <div class="container1">
+    <p id="mes" class="cont1"></p>
+    <p id="semana" class="cont1"></p>
+    <p id="dia" class="cont1"></p>
+   </div>
+
+    <!---Inf Cases Covid-19 //-->
+    <div class="container2">
+
+        <p id="notificacoes"></p>
+        <p id="confirmados"></p>
+        <p id="suspeitos"></p>
+        <p id="ativos"></p>
+
+    </div>
+    
+    <div class="container3">
+
+        <p id="descartados"></p>
+        <p id="isolamento"></p>
+        <p id="recuperados"></p>
+        <p id="obitos"></p>
+
+    </div>
+   
+   <div class="containerhj">
+
+        <p id="atv-hoje"></p>
+        <p id="neg-hoje"></p>
+        <p id="sus-hoje"></p>
+        
+   </div>
+
+</div>
+
+</body>
+
+<a href="../../../../index.html"><button  class="btBlue">Página Inicial</button></a>
+<input type="button" class="btYellow" onclick="download()" value="Download">
+
+<script src="./../../../public/js/jquery-3.4.1.slim.min.js"></script>
+<script src="./../../../public/js/bootstrap.min.js"></script>
+
+<script>
+
+// variables who will received values
+const urlParam = new URLSearchParams(window.location.search);
+
+const diaParam = urlParam.get("dia");
+const mesParam = urlParam.get("mes");
+const semanaParam = urlParam.get("semana");
+
+const notificacoesParam = urlParam.get("notificacoes");
+const confirmadosParam = urlParam.get("confirmados");
+const suspeitosParam = urlParam.get("suspeitos");
+const ativosParam = urlParam.get("ativos");
+
+const descartadosParam = urlParam.get("descartados");
+const isolamentoParam = urlParam.get("isolamento");
+const recuperadosParam = urlParam.get("recuperados");
+const obitosParam = urlParam.get("obitos");
+
+const atvhojeParam = urlParam.get("atv-hoje");
+const sushojeParam = urlParam.get("sus-hoje");
+const neghojeParam = urlParam.get("neg-hoje");
+
+// send values to boletim
+
+document.getElementById('dia').innerHTML = diaParam;
+document.getElementById('mes').innerHTML = mesParam;
+document.getElementById('semana').innerHTML = semanaParam;
+
+document.getElementById('notificacoes').innerHTML = notificacoesParam;
+document.getElementById('confirmados').innerHTML = confirmadosParam;
+document.getElementById('suspeitos').innerHTML = suspeitosParam;
+document.getElementById('ativos').innerHTML = ativosParam;
+
+document.getElementById('descartados').innerHTML = descartadosParam;
+document.getElementById('isolamento').innerHTML = isolamentoParam;
+document.getElementById('recuperados').innerHTML = recuperadosParam;
+document.getElementById('obitos').innerHTML = obitosParam;
+
+document.getElementById('atv-hoje').innerHTML = atvhojeParam;;
+document.getElementById('sus-hoje').innerHTML = sushojeParam;
+document.getElementById('neg-hoje').innerHTML = neghojeParam;
+
+function download() {
+console.log("rodou");
+
+ var node = document.getElementById('infboletim');
+
+   domtoimage.toPng(node)
+    .then(function (dataUrl) {
+        var img = new Image();
+        img.src = dataUrl;
+        downloadURI(dataUrl, "Boletim_Covid-19 - " + diaParam + " de " + mesParam + ".jpg")
+    })
+    .catch(function (error) {
+        console.error('oops, something went wrong', error);
+    });
+       }
+    function downloadURI(uri, name) {
+        var link = document.createElement("a");
+        link.download = name;
+        link.href = uri;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        delete link;   
+}
+    </script>
+
+</body>
+</html>
